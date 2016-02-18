@@ -11,5 +11,10 @@ def eval_number(number = 25):
     else:
         return s
 
-for num in range(1, int(sys.argv[1]) + 1):
-    print(eval_number(num))
+try:
+    if len(sys.argv) != 2 or int(sys.argv[1]) < 1:
+        raise ValueError()
+    for num in range(1, int(sys.argv[1]) + 1):
+        print(eval_number(num))
+except ValueError as verr:
+    print('Usage: python XoomPayPal.py [int > 0]')
