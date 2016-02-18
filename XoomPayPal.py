@@ -4,10 +4,7 @@ def eval_number(number = 25):
         s += 'Xoom' 
     if number % 5 == 0:
         s += 'PayPal'
-    if s == ''
-        return number
-    else:
-        return s
+    return s if s != '' else number
 
 for num in range(1, int(sys.argv[0]) + 1):
     print(eval_number(num))
