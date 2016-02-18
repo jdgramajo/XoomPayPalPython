@@ -6,10 +6,7 @@ def eval_number(number = 25):
         s += 'Xoom' 
     if number % 5 == 0:
         s += 'PayPal'
-    if s == '':
-        return number
-    else:
-        return s
+    return s if s != '' else number
 
 try:
     if len(sys.argv) != 2 or int(sys.argv[1]) < 1:
